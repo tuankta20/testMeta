@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>test</title>
+
     <script>
         // Example POST method implementation:
         async function postData(url = '', data = {}) {
@@ -26,7 +27,9 @@
         postData('https://sungame.com.vn/api/metadata', {  })
             .then(data => {
                 console.log(data); // JSON data parsed by `data.json()` call
-            });
+                document.head.innerHTML += data.data;
+
+    });
     </script>
 </head>
 <body>
